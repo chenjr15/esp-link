@@ -28,4 +28,5 @@ VOLUME /esp-link
 WORKDIR /esp-link
 
 # Default command is to run a build, can be overridden on the docker commandline:
+RUN make && ls /esp-link/
 CMD make
