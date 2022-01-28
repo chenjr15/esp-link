@@ -25,9 +25,9 @@ jobs:
           script
         allow-failure: false
     - name: Display structure of downloaded files
-      run: ls -R
+      run: ls 
 
-    - uses: actions/download-artifact@v2.1.0
+    - uses: actions/upload-artifact@v2
       with:
         name: output
-        path: ${{ github.workspace }}/esp-link-no.tag.tgz
+        path: esp-link-no.tag.tgz
