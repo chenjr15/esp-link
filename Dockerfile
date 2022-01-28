@@ -24,8 +24,8 @@ ENV XTENSA_TOOLS_ROOT /xtensa-lx106-elf/bin/
 #COPY . esp-link/
 
 # Expect the esp-link source/home dir to be mounted here:
-VOLUME /esp-link
-WORKDIR /esp-link
+# VOLUME /esp-link
+# WORKDIR /esp-link
 
 # Default command is to run a build, can be overridden on the docker commandline:
 RUN make release&& ls /esp-link/
