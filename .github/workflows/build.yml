@@ -13,11 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - uses: actions/download-artifact@v2.1.0
-      with:
-        name: output
-        path: esp-link-no.tag.tgz
+
+
 
     - name: Run .travis.yml build script
       uses: ktomk/run-travis-yml@v1
@@ -27,3 +24,7 @@ jobs:
           before_install
           script
         allow-failure: false
+    - uses: actions/download-artifact@v2.1.0
+      with:
+        name: output
+        path: esp-link-no.tag.tgz
