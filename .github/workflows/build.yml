@@ -24,6 +24,9 @@ jobs:
           before_install
           script
         allow-failure: false
+    - name: Display structure of downloaded files
+      run: ls -R
+      
     - uses: actions/download-artifact@v2.1.0
       with:
         name: output
